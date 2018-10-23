@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset=utf-8>
+
+    <title>Annotation</title>
+    
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+   
+   <div class="annotationToolbar">+</div>
+   
+    <div class="annotation">
+        <div class="open-button">+</div>
+        <input class="annotationtitle" placeholder="Annotation">
+        <div class="close-button">&times;</div>
+        <textarea rows="3" placeholder="Type Here..."></textarea>
+        <a href="#" class="ico delete"></a>
+        <a href="#" class="ico save"></a>
+    </div>
+    
+    <br>
+    <br>
+    <br>
+    <p>Annotation Button in Toolbar (or something like this)</p>
+    
+    <br>
+    <br>
+    <br>
+    <p>Annotation Cursor, Annotation</p>
+
+
+
+
+
+    <script>
+        document.querySelector('.open-button').addEventListener('click', toggleAnnotation);
+        document.querySelector('.close-button').addEventListener('click', toggleAnnotation);
+
+        function toggleAnnotation() {
+            document.querySelector('.annotation').classList.toggle('open');
+            document.querySelector('.annotationtitle').classList.toggle('visible');
+            document.querySelector('textarea').classList.toggle('visible');
+            document.querySelector('.close-button').classList.toggle('visible');
+            document.querySelector('.ico.delete').classList.toggle('visible');
+            document.querySelector('.ico.save').classList.toggle('visible');
+            document.querySelector('.open-button').classList.toggle('invisible');
+        }
+
+    </script>
+
+</body>
+
+</html>
